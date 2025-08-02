@@ -45,6 +45,7 @@ const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
 const location = require("./routes/location");
 const gstRoutes = require("./routes/gstRoutes");
+const adminRoutes = require("./routes/adminRoutes")
 // const { registerSeller } = require('./controllers/auth');
 
 
@@ -62,6 +63,7 @@ app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", gstRoutes)
+app.use('/api', adminRoutes);
 
 
 

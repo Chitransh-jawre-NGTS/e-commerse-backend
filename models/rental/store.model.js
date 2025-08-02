@@ -10,7 +10,7 @@ const storeSchema = new mongoose.Schema(
     contact: {
       type: String,
       required: true,
-      unique: true, // assuming contact should be unique
+      unique: true,
     },
     email: {
       type: String,
@@ -21,6 +21,18 @@ const storeSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+    },
+    gstNumber: {
+      type: String,
+      required: true,
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    isApproved: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true }

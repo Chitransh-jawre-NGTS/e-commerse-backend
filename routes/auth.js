@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check } = require('express-validator');
 const { signout, signup, signin} = require("../controllers/auth");
-const { adminLogin, adminRegister } = require("../controllers/rental-Controlers/authControler");
+const { sellerLogin,  sellerRegister } = require("../controllers/rental-Controlers/authControler");
 
 router.get("/signout", signout);
 
@@ -17,8 +17,8 @@ router.post("/signin", [
   check("password", "password is important").isLength({ min: 3 })
 ], signin);
 
-router.post("/admin/login", adminLogin);
-router.post("/admin/register", adminRegister);
+router.post("/seller/login", sellerLogin);
+router.post("/seller/register", sellerRegister);
 
 
 
